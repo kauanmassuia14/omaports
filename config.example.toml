@@ -1,0 +1,17 @@
+refresh_interval = 3
+
+[projects]
+search_git_root = true
+
+[ui]
+provider = "auto"
+
+[actions]
+terminal = "kitty"
+editor = "nvim"
+
+[ports]
+ignore = [53, 631]
+
+[waybar]
+icon = "󰖟"
