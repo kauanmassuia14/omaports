@@ -161,7 +161,12 @@ fn choose_provider(setting: &str) -> anyhow::Result<Box<dyn UiProvider>> {
 
 fn open_omarchy_panel() -> bool {
     Command::new("omarchy-shell")
-        .args(["io.github.kauanmassuia14.portpilot", "toggle"])
+        .args([
+            "shell",
+            "toggle",
+            "io.github.kauanmassuia14.portpilot",
+            "{}",
+        ])
         .stdin(Stdio::null())
         .stdout(Stdio::null())
         .stderr(Stdio::null())

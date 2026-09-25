@@ -11,6 +11,7 @@ BarWidget {
     readonly property string binary: String(setting("binary", "portpilot") || "portpilot")
     readonly property string icon: String(setting("icon", "󰖟") || "󰖟")
     readonly property int refreshIntervalSec: Math.max(3, Number(setting("refreshIntervalSec", 3)) || 3)
+    readonly property bool opened: panelLoader.item ? panelLoader.item.opened === true : false
     property var services: []
     property int serviceCount: 0
     property string scanError: ""
@@ -39,6 +40,14 @@ BarWidget {
 
     function togglePanel() {
         if (panelLoader.item) panelLoader.item.toggle()
+    }
+
+    function open() {
+        if (panelLoader.item) panelLoader.item.open()
+    }
+
+    function close() {
+        if (panelLoader.item) panelLoader.item.close()
     }
 
     Process {
@@ -98,8 +107,8 @@ BarWidget {
 
     IpcHandler {
         target: "io.github.kauanmassuia14.portpilot"
-        function open(): void { if (panelLoader.item) panelLoader.item.open() }
-        function close(): void { if (panelLoader.item) panelLoader.item.close() }
+        function open(): void { root.open() }
+        function close(): void { root.close() }
         function toggle(): void { root.togglePanel() }
     }
 
