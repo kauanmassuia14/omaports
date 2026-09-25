@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.kauanmassuia14.portpilot",
+  "name": "PortPilot",
+  "version": "0.1.0",
+  "author": "PortPilot contributors",
+  "license": "MIT",
+  "description": "Find local development services by port, project, and process.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "PortPilot",
+    "description": "Local development ports and projects",
+    "category": "Development",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "binary": "portpilot",
+      "refreshIntervalSec": 3,
+      "icon": "󰖟"
+    },
+    "schema": [
+      {
+        "key": "binary",
+        "type": "string",
+        "label": "PortPilot executable",
+        "defaultValue": "portpilot",
+        "description": "Command or absolute path to the PortPilot executable."
+      },
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 3,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 3
+      },
+      {
+        "key": "icon",
+        "type": "string",
+        "label": "Bar icon",
+        "defaultValue": "󰖟"
+      }
+    ]
+  }
+}
