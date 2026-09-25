@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-labelledby="title description">
+  <title id="title">PortPilot native Omarchy panel views</title>
+  <desc id="description">Two views of the PortPilot panel: a development service list, and the details and actions for a selected project service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a23"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".38"/></filter>
+  </defs>
+  <rect width="1080" height="640" rx="24" fill="url(#bg)"/>
+  <text x="50" y="58" fill="#f0f6fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">PortPilot · native Omarchy panel</text>
+  <text x="1030" y="58" text-anchor="end" fill="#8290a0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">TWO VIEWS · SAMPLE SERVICES</text>
+
+  <text x="53" y="96" fill="#79c0ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1.3">01 / SERVICE LIST</text>
+  <g transform="translate(50 112)" filter="url(#shadow)">
+    <rect width="438" height="474" rx="18" fill="#111820" stroke="#2a3542"/>
+    <path d="M18 0h402a18 18 0 0 1 18 18v67H0V18A18 18 0 0 1 18 0Z" fill="#161f29"/>
+    <circle cx="32" cy="34" r="13" fill="#17283a" stroke="#31506c"/><circle cx="32" cy="34" r="6" fill="none" stroke="#79c0ff" stroke-width="1.5"/><circle cx="32" cy="34" r="2" fill="#3fb950"/>
+    <text x="59" y="34" fill="#f0f6fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">PortPilot</text>
+    <text x="59" y="58" fill="#8b949e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11">4 local services</text>
+    <path d="M0 86h438" stroke="#28333e"/>
+    <text x="24" y="119" fill="#718096" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1">PORT</text>
+    <text x="101" y="119" fill="#718096" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROJECT · PROCESS</text>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">
+      <rect x="13" y="133" width="412" height="61" rx="9" fill="#182636" stroke="#263f57"/>
+      <text x="25" y="159" fill="#79c0ff" font-weight="700">5173</text><text x="101" y="157" fill="#f0f6fc" font-weight="600">postiq</text><text x="101" y="178" fill="#8b949e" font-size="11">node</text><circle cx="402" cy="163" r="4" fill="#3fb950"/>
+      <text x="25" y="225" fill="#79c0ff" font-weight="700">3000</text><text x="101" y="223" fill="#f0f6fc" font-weight="600">postiq-api</text><text x="101" y="244" fill="#8b949e" font-size="11">node</text><circle cx="402" cy="229" r="4" fill="#3fb950"/>
+      <text x="25" y="291" fill="#79c0ff" font-weight="700">5432</text><text x="101" y="289" fill="#f0f6fc" font-weight="600">postiq</text><text x="101" y="310" fill="#8b949e" font-size="11">postgres · Docker</text><circle cx="402" cy="295" r="4" fill="#3fb950"/>
+      <text x="25" y="357" fill="#79c0ff" font-weight="700">6379</text><text x="101" y="355" fill="#f0f6fc" font-weight="600">snaqturbo</text><text x="101" y="376" fill="#8b949e" font-size="11">redis · Docker</text><circle cx="402" cy="361" r="4" fill="#3fb950"/>
+    </g>
+    <path d="M22 405h394" stroke="#28333e"/>
+    <text x="24" y="436" fill="#718096" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11">Select a row to open its details.</text>
+    <text x="24" y="455" fill="#718096" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10">↑ ↓ TO MOVE  ·  ENTER TO SELECT</text>
+  </g>
+
+  <text x="535" y="96" fill="#79c0ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1.3">02 / SELECTED SERVICE</text>
+  <g transform="translate(532 112)" filter="url(#shadow)">
+    <rect width="498" height="474" rx="18" fill="#111820" stroke="#2a3542"/>
+    <path d="M18 0h462a18 18 0 0 1 18 18v67H0V18A18 18 0 0 1 18 0Z" fill="#161f29"/>
+    <text x="24" y="38" fill="#79c0ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">‹  Back to services</text>
+    <path d="M0 86h498" stroke="#28333e"/>
+    <text x="25" y="126" fill="#8b949e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">SERVICE DETAILS</text>
+    <text x="25" y="161" fill="#f0f6fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="700">postiq</text>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">
+      <text x="25" y="196" fill="#8b949e">Port</text><text x="132" y="196" fill="#f0f6fc">5173 · TCP</text>
+      <text x="25" y="224" fill="#8b949e">Process</text><text x="132" y="224" fill="#f0f6fc">node · PID 38291</text>
+      <text x="25" y="252" fill="#8b949e">Command</text><text x="132" y="252" fill="#f0f6fc">npm run dev</text>
+      <text x="25" y="280" fill="#8b949e">Root</text><text x="132" y="280" fill="#f0f6fc">~/Git/postiq</text>
+      <text x="25" y="308" fill="#8b949e">Git</text><text x="132" y="308" fill="#f0f6fc">main</text>
+      <text x="25" y="336" fill="#8b949e">URL</text><text x="132" y="336" fill="#f0f6fc">http://localhost:5173</text>
+    </g>
+    <path d="M24 359h450" stroke="#28333e"/>
+    <text x="25" y="386" fill="#8b949e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">ACTIONS</text>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">
+      <rect x="24" y="401" width="216" height="31" rx="7" fill="#17283a" stroke="#31506c"/><text x="132" y="421" text-anchor="middle" fill="#b9d9f6">Open in browser</text>
+      <rect x="251" y="401" width="223" height="31" rx="7" fill="#17283a" stroke="#31506c"/><text x="362" y="421" text-anchor="middle" fill="#b9d9f6">Open terminal</text>
+      <rect x="24" y="440" width="216" height="27" rx="7" fill="#17283a" stroke="#31506c"/><text x="132" y="458" text-anchor="middle" fill="#b9d9f6">Open editor</text>
+      <rect x="251" y="440" width="223" height="27" rx="7" fill="#2b1a1d" stroke="#693338"/><text x="362" y="458" text-anchor="middle" fill="#ffaaa5">Stop · confirm with SIGTERM</text>
+    </g>
+  </g>
+</svg>
