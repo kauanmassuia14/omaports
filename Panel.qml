@@ -388,8 +388,49 @@ Panel {
                     }
                     Row {
                         spacing: Style.space(8)
-                        Rectangle { width: Style.space(112); height: Style.space(38); radius: Style.cornerRadius; color: cancelMouse.containsMouse ? Style.hoverFillFor(root.foreground, Color.accent) : "transparent"; Text { anchors.centerIn: parent; text: "Cancel"; color: root.foreground; font.family: Style.font.family; font.pixelSize: Style.font.body }; MouseArea { id: cancelMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: root.page = "actions" } }
-                        Rectangle { width: Style.space(152); height: Style.space(38); radius: Style.cornerRadius; color: root.selectedService ? Color.urgent : Qt.darker(Color.urgent, 1.8); Text { anchors.centerIn: parent; text: "Stop with SIGTERM"; color: root.foreground; font.family: Style.font.family; font.pixelSize: Style.font.caption }; MouseArea { anchors.fill: parent; enabled: !!root.selectedService; cursorShape: enabled ? Qt.PointingHandCursor : Qt.ArrowCursor; onClicked: root.stopSelectedService() } }
+                        Rectangle {
+                            width: Style.space(112)
+                            height: Style.space(38)
+                            radius: Style.cornerRadius
+                            color: cancelMouse.containsMouse
+                                ? Style.hoverFillFor(root.foreground, Color.accent)
+                                : "transparent"
+                            Text {
+                                anchors.centerIn: parent
+                                text: "Cancel"
+                                color: root.foreground
+                                font.family: Style.font.family
+                                font.pixelSize: Style.font.body
+                            }
+                            MouseArea {
+                                id: cancelMouse
+                                anchors.fill: parent
+                                hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: root.page = "actions"
+                            }
+                        }
+                        Rectangle {
+                            width: Style.space(152)
+                            height: Style.space(38)
+                            radius: Style.cornerRadius
+                            color: root.selectedService
+                                ? Color.urgent
+                                : Qt.darker(Color.urgent, 1.8)
+                            Text {
+                                anchors.centerIn: parent
+                                text: "Stop with SIGTERM"
+                                color: root.foreground
+                                font.family: Style.font.family
+                                font.pixelSize: Style.font.caption
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                enabled: !!root.selectedService
+                                cursorShape: enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
+                                onClicked: root.stopSelectedService()
+                            }
+                        }
                     }
                 }
 
